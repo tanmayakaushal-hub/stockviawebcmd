@@ -1,0 +1,43 @@
+Watching RELIANCE.NS for price to touch 1500...
+(MOCK_MODE active — using simulated price ramp, not live market data)
+
+  [tick 0] RELIANCE.NS = 1467.84
+  [tick 1] RELIANCE.NS = 1475.06
+  [tick 2] RELIANCE.NS = 1482.94
+  [tick 3] RELIANCE.NS = 1488.26
+  [tick 4] RELIANCE.NS = 1493.27
+  [tick 5] RELIANCE.NS = 1500.47
+
+>>> TARGET TOUCHED — AUTHENTICATION REQUIRED <<<
+    Symbol:   RELIANCE.NS
+    Price:    1500.47
+    Quantity: 2
+    Sale will NOT proceed without confirmation.
+
+    (Simulated OTP sent to your device: 5041)
+    Enter code to authorize sell (or blank to cancel): 5041
+
+Authenticated. Placing sell order...
+Order result: {
+  "status": "SIMULATED_ONLY",
+  "orderId": "SIM-1787395888379",
+  "symbol": "RELIANCE.NS",
+  "price": 1500.47,
+  "quantity": 2,
+  "note": "No real order was placed. Wire a real broker API in broker.js to go live."
+}
+
+Final result: {
+  "status": "SOLD",
+  "symbol": "RELIANCE.NS",
+  "triggerPrice": 1500.47,
+  "quantity": 2,
+  "order": {
+    "status": "SIMULATED_ONLY",
+    "orderId": "SIM-1787395888379",
+    "symbol": "RELIANCE.NS",
+    "price": 1500.47,
+    "quantity": 2,
+    "note": "No real order was placed. Wire a real broker API in broker.js to go live."
+  }
+}

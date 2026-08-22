@@ -1,0 +1,56 @@
+{
+  "name": "stock-price-watcher",
+  "version": "0.1.0",
+  "description": "WebCMD adapter that watches a stock price and requests authentication before triggering a sell when a target is touched.",
+  "main": "src/adapter.js",
+  "keywords": [
+    "webcmd",
+    "adapter",
+    "plugin",
+    "stock",
+    "finance",
+    "gdg-nith"
+  ],
+  "author": "Keshav",
+  "license": "MIT",
+  "webcmd": {
+    "commands": [
+      {
+        "name": "stock watch",
+        "description": "Watch a stock price and trigger an authenticated sell when the target is touched.",
+        "args": [
+          {
+            "name": "--symbol",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "--target",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "--quantity",
+            "required": false,
+            "type": "number",
+            "default": 1
+          },
+          {
+            "name": "--condition",
+            "required": false,
+            "type": "string",
+            "default": "touch"
+          }
+        ],
+        "strategy": "PUBLIC",
+        "outputFormat": "json"
+      }
+    ]
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
